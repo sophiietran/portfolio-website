@@ -1,3 +1,7 @@
-.html{
-  background-color: #9d9c91;
+body{
+  background-color: #f2f2f4;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
 }
