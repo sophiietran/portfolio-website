@@ -1,19 +1,21 @@
 import './App.css'
-import Header from "./components/Header";
-import About from './components/About';
-import Experience from './components/Experience';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
+import Header from "./components/sections/Header";
+import Home from './components/sections/HomeSection';
+import About from './components/sections/AboutSection';
+import Experience from './components/sections/ExperienceSection';
+import Projects from './components/sections/ProjectSection';
+import Contact from './components/sections/ContactSection';
 
 export default function App() {
   return (
     <>
       <Header/>
       <main>
-        <About/>
-        <Experience/>
-        <Projects/>
-        <Contact/>
+        <Home/>
+        <About name = "about"/>
+        <Experience name = "experience"/>
+        <Projects name = "projects"/>
+        <Contact name="contact"/>
       </main>
     </>
   );

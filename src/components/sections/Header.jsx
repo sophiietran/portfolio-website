@@ -3,6 +3,7 @@ export default function Header(){
     return(
         <header>
            <p>s</p>
+           
            <nav>
             <a href="#about">about</a>
             <a href="#experience">experience</a>
