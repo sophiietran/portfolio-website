@@ -1,4 +1,4 @@
-import './App.css'
+import './index.css'
 import Header from "./components/sections/Header";
 import Home from './components/sections/HomeSection';
 import About from './components/sections/AboutSection';
