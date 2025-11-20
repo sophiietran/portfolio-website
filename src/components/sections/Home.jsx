@@ -10,8 +10,11 @@ export default function HomeSection() {
           contact: email name location contact experience
         </h4>
 
+        {/* email */}
         <div class="flex items-center mt-33">
-          <h3 class="text-[#9D9C91] text-lg font-medium mr-2">Get in touch: </h3>
+          <h3 class="text-[#9D9C91] text-lg font-medium mr-2">
+            Get in touch:{" "}
+          </h3>
           <a
             href="mailto:sophietrann01@gmail.com"
             class="text-[#778069] font-semibold text-lg underline"
@@ -19,6 +22,18 @@ export default function HomeSection() {
             sophietrann01@gmail.com
           </a>
         </div>
+
+        {/* download resume */}
+
+        <button class="bg-[#f2f2f4] px-3 py-1 rounded-md mt-5 border-3 border-double border-[#778069]">
+          <a
+            href="/Users/sophie/Documents/job-things/sophie-tran-resume.pdf"
+            download
+            class="text-[#778069] font-medium text-lg "
+          >
+            Download Resume
+          </a>
+        </button>
       </div>
     </section>
   );

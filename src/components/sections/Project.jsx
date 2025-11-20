@@ -1,5 +1,5 @@
 import SectionTitle from "../SectionTitle";
-import Project from "../Project";
+import Project from "../ProjectCard";
 
 export default function ProjectSection(props) {
   return (
