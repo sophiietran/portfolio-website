@@ -42,10 +42,10 @@ export default function Header(){
               <img
                 src="src/assets/hamburger-menu.png"
                 alt="navigation menu"
-                class="h-8 w-8"
+                class="h-7 w-7"
               />
             ) : (
-              <img src="src/assets/back.png" alt="close menu" class="h-8 w-8" />
+              <img src="src/assets/back.png" alt="close menu" class="h-7 w-7" />
             )}
           </button>
         </div>
@@ -54,6 +54,7 @@ export default function Header(){
           class= {`fixed inset-y-0 right-0 bg-[#aeb6a0] z-40 w-50 transform transition-transform duration-300 ease-in-out md:hidden ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'} flex flex-col items-center justify-baseline space-y-8 pt-30`}
         >
         
+        {/* add functionality to close out of nav menu by clicking body */}
           {navLinks.map((link) => (
             <a
               key={link.name}
