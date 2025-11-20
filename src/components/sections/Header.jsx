@@ -16,13 +16,13 @@ export default function Header(){
     }
 
     return (
-      <header class="bg-[#aeb6a0] text-[#f2f2f4] flex justify-between items-center py-4 px-4.5 z-50">
+      <header class="fixed top-0 w-full bg-[#778069] text-[#f2f2f4] flex justify-between items-center py-4 px-8 z-50">
         <a href="#" className="text-2xl font-bold z-50">
           S
         </a>
 
         {/* Desktop */}
-        <nav class="hidden md:flex space-x-10">
+        <nav class="hidden md:flex space-x-10 text-base">
           {/* show all the links */}
           {navLinks.map((link) => (
             <a
@@ -51,10 +51,11 @@ export default function Header(){
         </div>
 
         <div
-          class= {`fixed inset-y-0 right-0 bg-[#aeb6a0] z-40 w-50 transform transition-transform duration-300 ease-in-out md:hidden ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'} flex flex-col items-center justify-baseline space-y-8 pt-30`}
+          class={`fixed inset-y-0 right-0 bg-[#778069] z-40 w-50 transform transition-transform duration-300 ease-in-out md:hidden ${
+            isMenuOpen ? "translate-x-0" : "translate-x-full"
+          } flex flex-col items-center justify-baseline space-y-8 pt-30`}
         >
-        
-        {/* add functionality to close out of nav menu by clicking body */}
+          {/* add functionality to close out of nav menu by clicking body */}
           {navLinks.map((link) => (
             <a
               key={link.name}
