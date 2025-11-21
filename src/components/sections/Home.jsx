@@ -25,15 +25,15 @@ export default function HomeSection() {
 
         {/* download resume */}
         <a
-          href="/Users/sophie/Documents/job-things/sophie-tran-resume.pdf"
+          href="src/assets/sophie-tran-resume.pdf"
           download
           className="inline-flex items-center bg-[#f2f2f4] px-4 py-1 rounded-md mt-5 border-2 border-[#778069]
                      text-[#778069] font-medium text-lg
-                     hover:bg-[#cdcdc8] hover:border-[#778069] transition-all duration-200"
+                     hover:bg-[#dddcd8] hover:border-[#778069] transition-all duration-200"
           aria-label="Download Sophie Tran's Resume"
         >
           <img
-            src="src/assets/download-green.png" 
+            src="src/assets/download-green.png"
             alt="Download icon"
             className="mr-2 h-6"
           />
