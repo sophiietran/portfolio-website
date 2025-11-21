@@ -1,10 +1,10 @@
 export default function HomeSection() {
   return (
-    <section class="h-screen w-screen flex items-center justify-center">
+    <section class="h-screen w-screen place-content-center">
       <div class="text-left m-12">
         <h3 class="text-[#9D9C91] text-2xl mb-6">hello! my name is </h3>
         <h1 class="text-[#778069] font-semibold text-7xl mb-9">Sophie Tran</h1>
-        <h4 class="text-[#9D9C91] text-xl max-w-4xl">
+        <h4 class="text-[#b9b3ab] text-xl max-w-4xl">
           software engineer. front-end developer. located in
           <strong class="text-[#778069] font-medium"> dallas, texas</strong>.
           passionate about creating impactful solutions.
@@ -29,7 +29,7 @@ export default function HomeSection() {
           download
           className="inline-flex items-center bg-[#f2f2f4] px-4 py-1 rounded-md mt-5 border-2 border-[#778069]
                      text-[#778069] font-medium text-lg
-                     hover:bg-[#dddcd8] hover:border-[#778069] transition-all duration-200"
+                     hover:bg-[#d7d4cd] hover:border-[#778069] transition-all duration-200"
           aria-label="Download Sophie Tran's Resume"
         >
           <img
