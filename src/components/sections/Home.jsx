@@ -1,6 +1,6 @@
 export default function HomeSection() {
   return (
-    <section class="h-screen w-screen place-content-center">
+    <section class="h-screen w-screen flex justify-center items-center">
       <div class="text-left m-12">
         <h3 class="text-[#9D9C91] text-2xl mb-6">hello! my name is </h3>
         <h1 class="text-[#778069] font-semibold text-7xl mb-9">Sophie Tran</h1>
