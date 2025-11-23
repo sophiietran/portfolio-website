@@ -2,7 +2,7 @@ import SectionTitle from "../SectionTitle";
 import Job from "../Job";
 export default function Experience(props) {
   return (
-    <section id="#experience">
+    <section id="#experience" class="h-screen w-screen">
       <SectionTitle name = {props.name}/>
       <Job
         company = "Comerica Bank"
