@@ -1,11 +1,16 @@
 export default function Job(props){
-    return(
-        <div>
-            <h3>{props.company}</h3>
-            <h4>{props.title}</h4>
-            <p>{props.date}</p>
-            <p>{props.desc}</p>
+    return (
+      <div class="flex justify-between items-start gap-30 my-8">
+        {/* company + title */}
+        <div class="flex flex-col">
+          <h3 class="text-[#778069] text-lg font-semibold">{props.company}</h3>
+          <h4 class="text-[#778069]">{props.title}</h4>
         </div>
 
-    )
+        {/* date */}
+        <div class="flex">
+          <p class="italic text-[#b9b3ab] text-sm">{props.date}</p>
+        </div>
+      </div>
+    );
 }

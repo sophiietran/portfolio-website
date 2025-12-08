@@ -3,7 +3,10 @@ import Project from "../ProjectCard";
 
 export default function ProjectSection(props) {
   return (
-    <section id="#projects">
+    <section
+      id="projects"
+      class="w-screen py-8 px-4 flex flex-col justify-center items-center"
+    >
       <SectionTitle name={props.name} />
 
       <Project
