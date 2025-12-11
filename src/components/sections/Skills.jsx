@@ -3,11 +3,11 @@ export default function Skills(props) {
   return (
     <section
       id="skills"
-      class="w-screen py-24 px-4 flex flex-col justify-center items-center"
+      class="w-screen py-20 px-4 flex flex-col justify-center items-center"
     >
       <SectionTitle name={props.name} />
 
-      <div class="max-w-4xl w-full grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 mt-8 text-[#9d9c91] justify-items-center">
+      <div class="max-w-4xl w-full grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 text-[#9d9c91] justify-items-center">
         {/* languages */}
         <div class="mb-9">
           <h1 class="text-[#778069] text-lg font-semibold mb-3">LANGUAGES</h1>

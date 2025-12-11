@@ -4,7 +4,7 @@ export default function Experience(props) {
   return (
     <section
       id="experience"
-      class="w-screen py-8 px-4 flex flex-col justify-center items-center"
+      class="w-screen py-20 px-4 flex flex-col justify-center items-center"
     >
       <SectionTitle name={props.name} />
 
@@ -14,8 +14,6 @@ export default function Experience(props) {
           title="Software Engineer Intern"
           date="May-August 2025"
         />
-
-        
       </div>
     </section>
   );

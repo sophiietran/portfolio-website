@@ -27,7 +27,7 @@ export default function HomeSection() {
         <a
           href="src/assets/sophie-tran-resume.pdf"
           download
-          className="inline-flex items-center bg-[#f2f2f4] px-4 py-1 rounded-md mt-5 border-2 border-[#778069]
+          className="inline-flex items-center bg-[#f2f2f4] px-4 py-1 mt-5 border-2 border-[#778069]
                      text-[#778069] font-medium text-lg
                      hover:bg-[#d7d4cd] hover:border-[#778069] transition-all duration-200"
           aria-label="Download Sophie Tran's Resume"
