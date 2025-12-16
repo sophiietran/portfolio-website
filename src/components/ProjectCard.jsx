@@ -4,7 +4,7 @@ export default function ProjectCard(props) {
       {/* title */}
       <h2 class="font-semibold text-xl mb-2">{props.title}</h2>
       {/* description */}
-      <p class="text-[#9D9C91] font-regular text-md my-1">{props.desc}</p>
+      <p class="text-[#9d9c91] font-regular text-md my-1">{props.desc}</p>
 
       {/* skills and github */}
       <div class="absolute bottom-4 left-4 right-5 flex justify-between items-center pt-4">
@@ -12,7 +12,7 @@ export default function ProjectCard(props) {
           {props.skills.map((skill, index) => (
             <li
               key={index}
-              class="font-mono text-[#8b9084] px-2 pr-4 rounded-md"
+              class="font-mono text-[#778069] px-2 pr-4 rounded-md"
             >
               {skill}
             </li>

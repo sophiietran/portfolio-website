@@ -9,7 +9,7 @@ export default function Skills(props) {
 
       <div class="max-w-4xl w-full grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 text-[#9d9c91] justify-items-center">
         {/* languages */}
-        <div class="mb-9">
+        <div class>
           <h1 class="text-[#778069] text-lg font-semibold mb-3">LANGUAGES</h1>
           <ul class="text-center md:text-left space-y-0.5">
             <li>C</li>
@@ -23,7 +23,7 @@ export default function Skills(props) {
         </div>
 
         {/* frameworks */}
-        <div class="mb-9">
+        <div class>
           <h1 class="text-[#778069] text-lg font-semibold mb-3">FRAMEWORKS</h1>
 
           <ul class="text-center md:text-left space-y-0.5">
@@ -34,7 +34,7 @@ export default function Skills(props) {
         </div>
 
         {/* Tools */}
-        <div class="mb-9">
+        <div class>
           <h1 class="text-[#778069] text-lg text-center md:text-left font-semibold mb-3">
             TOOLS
           </h1>
