@@ -6,6 +6,7 @@ import Experience from './components/sections/Experience';
 import Projects from './components/sections/Project';
 import About from './components/sections/About';
 import Contact from './components/sections/Contact';
+import Footer from './components/sections/Footer';
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
         <Projects name = "projects"/>
         <About name = "about"/>
         <Contact name="contact"/>
+        <Footer name="footer"/>
       </main>
     </>
   );

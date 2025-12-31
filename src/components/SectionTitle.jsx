@@ -1,6 +1,6 @@
 export default function SectionTitle(props) {
   return (
-    <div class="flex items-center w-full max-w-4xl text-lg text-[#b9b3ab] ">
+    <div class="flex items-center w-full max-w-4xl text-lg text-[#b9b3ab] mb-12">
       {/* title */}
       <h1 class=" font-mono ml-8 uppercase">{props.name}</h1>
       {/* line */}

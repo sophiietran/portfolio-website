@@ -2,7 +2,6 @@ import { useState } from "react";
 import SectionTitle from "../SectionTitle";
 
 export default function Contact(props) {
-
   const [result, setResult] = useState("");
 
   const handleSubmit = async (e) => {
@@ -27,15 +26,14 @@ export default function Contact(props) {
     }
   };
 
-
   return (
     <section
       id="contact"
-      class="w-screen h-screen py-20 px-4 flex flex-col justify-start items-center"
+      class="w-screen pt-25 pb-5 px-4 flex flex-col justify-start items-center"
     >
       <SectionTitle name={props.name} />
 
-      <h1 class="text-xl font-semibold text-[#778069] mb-5">
+      <h1 class="text-xl font-semibold text-[#778069] mb-6">
         send me a message!
       </h1>
 
@@ -73,7 +71,7 @@ export default function Contact(props) {
 
         <button
           type="submit"
-          class="bg-[#778069] text-[#fefefe] p-2 px-6 mt-5 rounded-md hover:bg-[#576245] transition-all duration-200"
+          class="bg-[#778069] text-[#fefefe] p-2 px-6 mt-8 rounded-md hover:bg-[#576245] transition-all duration-200"
         >
           <div class="flex justify-center items-center gap-3">
             <h1 class="text-base font-medium">send message </h1>
@@ -86,7 +84,30 @@ export default function Contact(props) {
       {result && (
         <p className="text-[#778069] mt-4 font-medium text-center">{result}</p>
       )}
+
+      {/* SOCIAL MEDIA */}
+      <div class="mt-36 justify-center items-center mb-0">
+        <h4 class="flex justify-center items-center text-[#778069] text-xl font-medium mb-8">
+          my socials:
+        </h4>
+        <div class="flex gap-8">
+          <a href="https://github.com/sophiietran">
+            <img
+              src="src/assets/github-icon.svg"
+              alt="github icon"
+              class="h-12 w-12"
+            />
+          </a>
+
+          <a href="https://www.linkedin.com/in/sophiietran">
+            <img
+              src="src/assets/linkedin-icon.svg"
+              alt="linkedin icon"
+              class="h-12 w-12"
+            />
+          </a>
+        </div>
+      </div>
     </section>
   );
 }
-

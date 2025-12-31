@@ -1,9 +1,9 @@
 export default function Job(props){
     return (
-      <div class="flex justify-between items-start gap-30 mx-10 mb-9">
+      <div class="flex justify-between items-start mx-12 pb-9">
         {/* company + title */}
         <div class="flex flex-col">
-          <h3 class="text-[#778069] text-lg font-semibold">{props.company}</h3>
+          <h3 class="text-[#778069] text-lg font-semibold uppercase">{props.company}</h3>
           <h4 class="text-[#9d9c91]">{props.title}</h4>
         </div>
 

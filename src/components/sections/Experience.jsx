@@ -4,13 +4,13 @@ export default function Experience(props) {
   return (
     <section
       id="experience"
-      class="w-screen py-20 px-4 flex flex-col justify-center items-center"
+      class="w-screen pt-25 pb-5  px-4 flex flex-col justify-center items-center"
     >
       <SectionTitle name={props.name} />
 
-      <div class="w-full mx-12 px-8 max-w-4xl">
+      <div class="w-full max-w-4xl">
         <Job
-          company="COMERICA BANK"
+          company="Comerica bank"
           title="Software Engineer Intern"
           date="May-August 2025"
         />

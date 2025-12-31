@@ -5,7 +5,7 @@ export default function Project(props) {
   return (
     <section
       id="projects"
-      class="w-screen py-20 px-4 flex flex-col justify-center items-center"
+      class="w-screen pt-25 pb-5 px-4 flex flex-col justify-center items-center"
     >
       <SectionTitle name={props.name} />
 
