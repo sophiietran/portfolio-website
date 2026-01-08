@@ -6,7 +6,7 @@ export default function Skill(props) {
       class="w-screen pt-25 pb-5 px-4 flex flex-col justify-center items-center"
     >
       <SectionTitle name={props.name} />
-
+      
       <div>
         {/* insert a little icon */}
 
