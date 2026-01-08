@@ -40,12 +40,12 @@ export default function Header(){
           <button onClick={toggleNavMenu} aria-label="Toggle navigation menu">
             {isMenuOpen === false ? (
               <img
-                src="/public/hamburger-menu.png"
+                src="/hamburger-menu.png"
                 alt="navigation menu"
                 class="h-7 w-7"
               />
             ) : (
-              <img src="/public/back.png" alt="close menu" class="h-7 w-7" />
+              <img src="back.png" alt="close menu" class="h-7 w-7" />
             )}
           </button>
         </div>

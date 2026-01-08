@@ -21,7 +21,7 @@ export default function Skill(props) {
           </p>
 
           <div class="flex justify-center items-center">
-            <img src="/public/snoopy.png" alt="image of snoopy" class="h-60" />
+            <img src="/snoopy.png" alt="image of snoopy" class="h-60" />
           </div>
 
           <p class="mt-2">

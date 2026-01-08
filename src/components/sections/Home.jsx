@@ -33,7 +33,7 @@ export default function HomeSection() {
           aria-label="Download Sophie Tran's Resume"
         >
           <img
-            src="/public/download-green.png"
+            src="/download-green.png"
             alt="Download icon"
             className="mr-2 h-6"
           />
