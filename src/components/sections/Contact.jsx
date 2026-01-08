@@ -93,7 +93,7 @@ export default function Contact(props) {
         <div class="flex gap-8">
           <a href="https://github.com/sophiietran">
             <img
-              src="public/github-icon.svg"
+              src="/public/github-icon.svg"
               alt="github icon"
               class="h-12 w-12"
             />
@@ -101,7 +101,7 @@ export default function Contact(props) {
 
           <a href="https://www.linkedin.com/in/sophiietran">
             <img
-              src="public/linkedin-icon.svg"
+              src="/public/linkedin-icon.svg"
               alt="linkedin icon"
               class="h-12 w-12"
             />

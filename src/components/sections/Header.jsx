@@ -18,7 +18,7 @@ export default function Header(){
     return (
       <header class="fixed top-0 w-full bg-[#778069] text-[#f2f2f4] flex justify-between items-center py-4 px-8 z-50">
         <a href="#" className="text-2xl font-bold z-50">
-          <img src="public/favicon.svg" alt="leaf icon" class="h-8 w-8 m-0" />
+          <img src="/public/favicon.svg" alt="leaf icon" class="h-8 w-8 m-0" />
         </a>
 
         {/* Desktop */}
@@ -40,12 +40,12 @@ export default function Header(){
           <button onClick={toggleNavMenu} aria-label="Toggle navigation menu">
             {isMenuOpen === false ? (
               <img
-                src="public/hamburger-menu.png"
+                src="/public/hamburger-menu.png"
                 alt="navigation menu"
                 class="h-7 w-7"
               />
             ) : (
-              <img src="public/back.png" alt="close menu" class="h-7 w-7" />
+              <img src="/public/back.png" alt="close menu" class="h-7 w-7" />
             )}
           </button>
         </div>
