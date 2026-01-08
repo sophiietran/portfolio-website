@@ -22,7 +22,7 @@ export default function ProjectCard(props) {
           </ul>
 
           <img
-            src="src/assets/github-icon.svg"
+            src="public/github-icon.svg"
             alt="github logo"
             class="place-self-end mt-auto mb-1 ml-1"
           />
