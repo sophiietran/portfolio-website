@@ -4,6 +4,8 @@ export default function Header(){
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const navLinks = [
+      
+      {name: 'home', href: "#home"}, 
       {name: 'skills', href: "#skills"}, 
       {name: 'experience', href: "#experience"}, 
       {name: 'projects', href: "#projects"}, 

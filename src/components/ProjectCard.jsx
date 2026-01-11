@@ -1,12 +1,12 @@
 export default function ProjectCard(props) {
   return (
-    <div class="relative bg-[#f2f2f4] text-[#778069] flex flex-col p-4 h-55 w-[375px] border border-[#b9b3ab] hover:bg-[#e9e7e3] transition-all duration-500 shadow-sm transform hover:-rotate-1 hover:-translate-y-1 hover:shadow-2xl">
+    <div class="relative bg-[#f2f2f4] text-[#778069] flex flex-col p-4 w-[375px] min-h-[285px] border border-[#b9b3ab] hover:bg-[#e9e7e3] transition-all duration-500 shadow-sm transform hover:-rotate-1 hover:-translate-y-1 hover:shadow-2xl">
       {/* card link */}
       <a href={props.github}>
         {/* title */}
         <h2 class="font-semibold text-xl mb-2">{props.title}</h2>
         {/* description */}
-        <p class="text-[#9d9c91] font-regular text-md my-1">{props.desc}</p>
+        <p class="text-[#9d9c91] font-regular text-md my-1 pt-2">{props.desc}</p>
 
         {/* skills and github */}
         <div class="absolute bottom-4 left-4 right-5 flex justify-between items-center pt-4">

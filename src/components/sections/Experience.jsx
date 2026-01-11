@@ -4,11 +4,11 @@ export default function Experience(props) {
   return (
     <section
       id="experience"
-      class="w-screen pt-25 pb-5  px-4 flex flex-col justify-center items-center"
+      class="w-screen pt-25 pb-5 px-4 flex flex-col justify-start items-center"
     >
       <SectionTitle name={props.name} />
 
-      <div class="w-full max-w-4xl">
+      <div class="w-full max-w-3xl px-7">
         <Job
           company="Comerica bank"
           title="Software Engineer Intern"

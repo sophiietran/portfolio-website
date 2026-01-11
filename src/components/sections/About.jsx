@@ -8,14 +8,13 @@ export default function Skill(props) {
       <SectionTitle name={props.name} />
       
       <div>
-        {/* insert a little icon */}
 
-        <div class="text-[#778069] leading-relaxed mx-12 max-w-3xl ">
+        <div class="text-[#778069] leading-relaxed px-6 max-w-3xl ">
           <p class="text-md">
             <span class="font-semibold text-lg">Hello!</span> I am currently a
             Master's student in Data Science at the University of Texas with a
             Bachelor's degree in Computer Science from the Univeristy of Texas
-            at Dallas. Last summer, I've had the priviledge to work at Comerica
+            at Dallas. Last summer, I had the priviledge to work at Comerica
             Bank as a software developer intern where I was on the Digital
             Engineering team.
           </p>

@@ -37,13 +37,16 @@ export default function Contact(props) {
         send me a message!
       </h1>
 
-      <form onSubmit={handleSubmit} class="flex flex-col items-center ">
+      <form
+        onSubmit={handleSubmit}
+        class="flex flex-col items-center px-3 w-full max-w-lg"
+      >
         <input
           type="text"
           name="first name"
           placeholder="first name"
           required
-          class="bg-[#fefefe] text-[#515b42] w-md p-1.5 px-4 rounded-md m-3 border border-[#b9b3ab] focus:outline-none focus:ring-1 focus:ring-[#778069]"
+          class="bg-[#fefefe] text-[#515b42] w-full p-2 px-4 rounded-md m-3 border border-[#b9b3ab] focus:outline-none focus:ring-1 focus:ring-[#778069]"
         />
 
         <input
@@ -51,7 +54,7 @@ export default function Contact(props) {
           name="last name"
           placeholder="last name"
           required
-          class="bg-[#fefefe] text-[#515b42] w-md p-1.5 px-4 rounded-md m-3 border border-[#b9b3ab] focus:outline-none focus:ring-1 focus:ring-[#778069]"
+          class="bg-[#fefefe] text-[#515b42] w-full p-2 px-4 rounded-md m-3 border border-[#b9b3ab] focus:outline-none focus:ring-1 focus:ring-[#778069]"
         />
 
         <input
@@ -59,14 +62,14 @@ export default function Contact(props) {
           name="email"
           placeholder="your email"
           required
-          class="bg-[#fefefe] text-[#515b42] w-md p-1.5 px-4 rounded-md m-3 border border-[#b9b3ab] focus:outline-none focus:ring-1 focus:ring-[#778069]"
+          class="bg-[#fefefe] text-[#515b42] w-full p-2 px-4 rounded-md m-3 border border-[#b9b3ab] focus:outline-none focus:ring-1 focus:ring-[#778069]"
         />
 
         <textarea
           name="message"
           placeholder="your message"
           required
-          class="bg-[#fefefe] text-[#515b42] w-md p-1.5 px-4 rounded-md m-3 border h-40 border-[#b9b3ab] focus:outline-none focus:ring-1 focus:ring-[#778069]"
+          class="bg-[#fefefe] text-[#515b42] w-full p-2 px-4 rounded-md m-3 border h-40 border-[#b9b3ab] focus:outline-none focus:ring-1 focus:ring-[#778069]"
         ></textarea>
 
         <button
@@ -92,11 +95,7 @@ export default function Contact(props) {
         </h4>
         <div class="flex gap-8">
           <a href="https://github.com/sophiietran">
-            <img
-              src="/github-icon.svg"
-              alt="github icon"
-              class="h-12 w-12"
-            />
+            <img src="/github-icon.svg" alt="github icon" class="h-12 w-12" />
           </a>
 
           <a href="https://www.linkedin.com/in/sophiietran">
