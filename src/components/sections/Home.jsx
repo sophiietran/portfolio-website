@@ -26,7 +26,7 @@ export default function HomeSection() {
 
         {/* download resume */}
         <a
-          href="src/assets/sophie-tran-resume.pdf"
+          href="/sophie-tran-resume.pdf"
           download
           class="inline-flex items-center bg-[#f2f2f4] px-4 py-1 mt-7 border-2 border-[#778069]
                      text-[#778069] font-medium text-lg
