@@ -1,9 +1,16 @@
 export default function HomeSection() {
   return (
-    <section id="home" class="h-screen w-screen flex justify-center items-center">
+    <section
+      id="home"
+      class="h-screen w-screen flex justify-center items-center"
+    >
       <div class="text-left m-12">
         <h3 class="text-[#9D9C91] text-2xl mb-6">hello! my name is </h3>
-        <h1 class="text-[#778069] font-semibold text-7xl mb-9">Sophie Tran</h1>
+
+        <h1 class="text-[#778069] font-semibold text-7xl mb-9">
+          Sophie Tran
+        </h1>
+
         <h4 class="text-[#b9b3ab] text-xl max-w-4xl">
           software engineer. front-end developer. located in
           <strong class="text-[#778069] font-medium"> dallas, texas</strong>.
@@ -33,11 +40,7 @@ export default function HomeSection() {
                      hover:bg-[#d7d4cd] hover:border-[#778069] transition-all duration-200"
           aria-label="Download Sophie Tran's Resume"
         >
-          <img
-            src="/download-green.png"
-            alt="Download icon"
-            class="mr-2 h-6"
-          />
+          <img src="/download-green.png" alt="Download icon" class="mr-2 h-6" />
           Resume
         </a>
       </div>
