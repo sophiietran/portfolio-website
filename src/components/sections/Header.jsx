@@ -1,7 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+
 export default function Header(){
 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    useEffect(() => {
+      const handleScroll = () => {
+        setIsScrolled(window.scrollY > 64); // ~header height
+      };
+
+      window.addEventListener("scroll", handleScroll);
+      return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
 
     const navLinks = [
       
@@ -18,57 +29,70 @@ export default function Header(){
     }
 
     return (
-      <header class="fixed top-0 w-full bg-[#778069] text-[#f2f2f4] flex justify-between items-center py-4 px-8 z-50">
-        <a href="#" className="text-2xl font-bold z-50">
-          <img src="/favicon.svg" alt="leaf icon" class="h-8 w-8 m-0" />
-        </a>
+      <>
+        <header
+          className={`fixed top-0 w-full flex justify-between items-center py-4 px-8 z-50 transition-all duration-500 ${
+            isScrolled ? "bg-[#131923]/70 backdrop-blur-md" : "bg-transparent"
+          } ${isMenuOpen ? "hidden md:flex" : "flex"}`}
+          
+        >
+          <a href="#">
+            <img src="/favicon.svg" alt="leaf icon" className="h-8 w-8 m-0" />
+          </a>
 
-        {/* Desktop */}
-        <nav class="hidden md:flex space-x-10 text-base">
-          {/* show all the links */}
-          {navLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              class="hover:text-[#d4d4d8] transition-colors duration-200"
-            >
-              {link.name}
-            </a>
-          ))}
-        </nav>
+          {/* Desktop Nav */}
+          <nav className="hidden md:flex space-x-10 text-base">
+            {navLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                className="hover:text-[#8a8787] transition-colors duration-200"
+              >
+                {link.name}
+              </a>
+            ))}
+          </nav>
 
-        {/* Mobile/Hamburger menu icon */}
-        <div class="md:hidden flex items-center z-50">
-          <button onClick={toggleNavMenu} aria-label="Toggle navigation menu">
-            {isMenuOpen === false ? (
+          {/* Hamburger button - hidden when menu is open*/}
+          <div
+            className={`md:hidden flex items-center z-50 ${isMenuOpen ? "hidden" : "flex"}`}
+          >
+            <button onClick={toggleNavMenu} aria-label="Toggle navigation menu">
               <img
                 src="/hamburger-menu.png"
                 alt="navigation menu"
-                class="h-7 w-7"
+                className="h-7 w-7"
               />
-            ) : (
-              <img src="back.png" alt="close menu" class="h-7 w-7" />
-            )}
-          </button>
-        </div>
+            </button>
+          </div>
+        </header>
 
+        {/* Show close button when side menu is displayed */}
+        {isMenuOpen && (
+          <div className="fixed top-4 right-8 z-50 md:hidden">
+            <button onClick={toggleNavMenu} aria-label="Close navigation menu">
+              <img src="x-thin.svg" alt="close menu" className="h-8 w-8" />
+            </button>
+          </div>
+        )}
+
+        {/* Mobile drawer  */}
         <div
-          class={`fixed inset-y-0 right-0 bg-[#778069] z-40 w-50 transform transition-transform duration-300 ease-in-out md:hidden ${
+          className={`fixed inset-y-0 right-0 bg-[#ffffff] text-[#131923] z-40 w-80 transform transition-transform duration-300 ease-in-out md:hidden ${
             isMenuOpen ? "translate-x-0" : "translate-x-full"
-          } flex flex-col items-center justify-baseline space-y-8 pt-30`}
+          } flex flex-col items-left justify-baseline space-y-6 pt-30 pl-6`}
         >
-          {/* add functionality to close out of nav menu by clicking body */}
           {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
               onClick={toggleNavMenu}
-              class="text-[#f2f2f4] transition-colors duration-200 text-xl"
+              className="transition-colors duration-200 text-l"
             >
-              {link.name}
+              //{link.name}
             </a>
           ))}
         </div>
-      </header>
+      </>
     );
 }
