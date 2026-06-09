@@ -5,27 +5,27 @@ export default function HomeSection() {
       class="h-screen w-screen flex justify-center items-center"
     >
       <div class="text-left m-12">
-        <h3 class="text-[#9D9C91] text-2xl mb-6">hello! my name is </h3>
+        <h3 class="text-2xl mb-6">hello! my name is </h3>
 
-        <h1 class="text-[#778069] font-semibold text-7xl mb-9">
+        <h1 class="font-semibold text-7xl mb-9">
           Sophie Tran
         </h1>
 
-        <h4 class="text-[#b9b3ab] text-xl max-w-4xl">
+        <h4 class="text-xl max-w-4xl">
           software engineer. front-end developer. located in
-          <strong class="text-[#778069] font-medium"> dallas, texas</strong>.
+          <strong class="font-medium"> dallas, texas</strong>.
           passionate about creating impactful solutions.
         </h4>
 
         {/* email */}
         <div class="flex flex-wrap sm:flex-nowrap items-center mt-24 text-center sm:text-left">
-          <h3 class="text-[#9D9C91] text-lg font-medium mr-2">
+          <h3 class="text-lg font-medium mr-2">
             Get in touch:{" "}
           </h3>
 
           <a
             href="mailto:sophietrann01@gmail.com"
-            class="text-[#778069] font-semibold text-lg underline"
+            class="font-semibold text-lg underline"
           >
             sophietrann01@gmail.com
           </a>
@@ -35,9 +35,9 @@ export default function HomeSection() {
         <a
           href="/sophie-tran-resume.pdf"
           download
-          class="inline-flex items-center bg-[#f2f2f4] px-4 py-1 mt-7 border-2 border-[#778069]
-                     text-[#778069] font-medium text-lg
-                     hover:bg-[#d7d4cd] hover:border-[#778069] transition-all duration-200"
+          class="inline-flex items-center bg-[#f2f2f4] px-4 py-1 mt-7 border-2 border-white
+                    font-medium text-lg
+                     hover:bg-[#d7d4cd] hover:border-white transition-all duration-200"
           aria-label="Download Sophie Tran's Resume"
         >
           <img src="/download-green.png" alt="Download icon" class="mr-2 h-6" />

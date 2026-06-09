@@ -11,7 +11,7 @@ export default function Skills(props) {
         {/* languages */}
         <div class>
           <h1 class="text-[#778069] text-lg font-semibold mb-3">LANGUAGES</h1>
-          <ul class="text-center md:text-left space-y-0.5">
+          <ul class="text-center md:text-left space-y-0.5"> 
             <li>C</li>
             <li>C++</li>
             <li>CSS</li>

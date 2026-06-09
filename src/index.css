@@ -1,14 +1,22 @@
 @import "tailwindcss";
 
+@theme {
+  --background-image-page-gradient: 
+    radial-gradient(circle at top left, rgba(190, 98, 41, 0.2), transparent 20%),
+    radial-gradient(circle at bottom right, rgba(190, 98, 41, 0.2), transparent 20%);
+}
+
 html {
   scroll-behavior: smooth;
 }
 
-body{
-  background-color: #f2f2f4;
+body {
+  background-color: #131923;
+  background-image: var(--background-image-page-gradient);
+  color: #ffffff;
   margin: 0;
   padding: 0;
-  height: 100%;
+  min-height: 100vh;
   width: 100%;
   font-family: 'Inter', sans-serif;
 }

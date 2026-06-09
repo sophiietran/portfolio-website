@@ -10,7 +10,8 @@ import Footer from './components/sections/Footer';
 
 export default function App() {
   return (
-    <>
+    
+    <div class="bg-card-gradient text-white">
       <Header/>
 
       <main>
@@ -22,6 +23,7 @@ export default function App() {
         <Contact name="contact"/>
         <Footer name="footer"/>
       </main>
-    </>
+
+    </div>
   );
 }
