@@ -2,47 +2,46 @@ export default function HomeSection() {
   return (
     <section
       id="home"
-      class="h-screen w-screen flex justify-center items-center"
+      class="relative h-screen w-screen flex justify-center items-center bg-linear-to-t from-[rgba(190,98,41,0.1)] via-transparent via-20% to-transparent"
     >
-      <div class="text-left m-12">
-        <h3 class="text-2xl mb-6">hello! my name is </h3>
+      <div class="text-center m-12 -mt-7">
+        <p class="text-xl">hello! my name is</p>
 
-        <h1 class="font-semibold text-7xl mb-9">
-          Sophie Tran
-        </h1>
+        <h1 class="font-bold text-[10rem] tracking-wider ">SOPHIE TRAN</h1>
 
-        <h4 class="text-xl max-w-4xl">
+        <p class="text-2xl max-w-4xl mx-auto">
           software engineer. front-end developer. located in
-          <strong class="font-medium"> dallas, texas</strong>.
-          passionate about creating impactful solutions.
-        </h4>
+          <span class="text-[#f1821a]"> dallas, texas</span>. passionate about
+          creating impactful solutions.
+        </p>
 
-        {/* email */}
-        <div class="flex flex-wrap sm:flex-nowrap items-center mt-24 text-center sm:text-left">
-          <h3 class="text-lg font-medium mr-2">
-            Get in touch:{" "}
-          </h3>
+        {/* email + resume */}
+        <div class="group absolute bottom-45 left-0 right-0 flex flex-col items-center gap-4 text-[#797979] ">
+          <div class="flex flex-wrap justify-center items-center font-medium text-lg sm:flex-nowrap group-hover:text-[#ffffff]">
+            <p class="mr-2 transition-colors duration-300 ">get in touch: </p>
+            <a
+              href="mailto:sophietrann01@gmail.com"
+              class="transition-colors duration-300 hover:text-[#f1821a]"
+            >
+              sophietrann01@gmail.com
+            </a>
+          </div>
 
           <a
-            href="mailto:sophietrann01@gmail.com"
-            class="font-semibold text-lg underline"
+            href="/sophie-tran-resume-swe.pdf"
+            download
+            class="inline-flex items-center px-4 py-1 border-2 border-[#797979]
+            font-medium text-lg transition-all duration-300 group-hover:text-[#ffffff] group-hover:border-[#ffffff] hover:text-[#f1821a] hover:border-[#f1821a]"
+            aria-label="Download Sophie Tran's Resume"
           >
-            sophietrann01@gmail.com
+            <img
+              src="/download-green.png"
+              alt="Download icon"
+              class="mr-2 h-6"
+            />
+            Resume
           </a>
         </div>
-
-        {/* download resume */}
-        <a
-          href="/sophie-tran-resume.pdf"
-          download
-          class="inline-flex items-center bg-[#f2f2f4] px-4 py-1 mt-7 border-2 border-white
-                    font-medium text-lg
-                     hover:bg-[#d7d4cd] hover:border-white transition-all duration-200"
-          aria-label="Download Sophie Tran's Resume"
-        >
-          <img src="/download-green.png" alt="Download icon" class="mr-2 h-6" />
-          Resume
-        </a>
       </div>
     </section>
   );

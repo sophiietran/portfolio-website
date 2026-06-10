@@ -2,7 +2,7 @@
 
 @theme {
   --background-image-page-gradient: 
-    radial-gradient(circle at top left, rgba(190, 98, 41, 0.2), transparent 20%),
+    radial-gradient(circle at top left, rgba(190, 98, 41, 0.2), transparent 15%),
     radial-gradient(circle at bottom right, rgba(190, 98, 41, 0.2), transparent 20%);
 }
 
@@ -11,7 +11,7 @@ html {
 }
 
 body {
-  background-color: #131923;
+  background-color: #10151d;
   background-image: var(--background-image-page-gradient);
   color: #ffffff;
   margin: 0;

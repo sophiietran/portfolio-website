@@ -32,13 +32,13 @@ export default function Header(){
       <>
         <header
           className={`fixed top-0 w-full flex justify-between items-center py-4 px-8 z-50 transition-all duration-500 ${
-            isScrolled ? "bg-[#131923]/70 backdrop-blur-md" : "bg-transparent"
+            isScrolled ? "bg-[#10151d]/70 backdrop-blur-md" : "bg-transparent"
           } ${isMenuOpen ? "hidden md:flex" : "flex"}`}
-          
         >
-          <a href="#">
+          {/* <a href="#">
             <img src="/favicon.svg" alt="leaf icon" className="h-8 w-8 m-0" />
-          </a>
+          </a> */}
+          <p className="text-[#6efaff]">sophietran.dev</p>
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex space-x-10 text-base">
@@ -46,7 +46,7 @@ export default function Header(){
               <a
                 key={link.name}
                 href={link.href}
-                className="hover:text-[#8a8787] transition-colors duration-200"
+                className=" text-[#ffffff] hover:text-[#54c1c5] transition-colors duration-200"
               >
                 {link.name}
               </a>
