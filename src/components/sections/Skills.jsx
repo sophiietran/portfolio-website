@@ -3,22 +3,23 @@ export default function Skills(props) {
   return (
     <section
       id="skills"
-      class="w-screen pt-25 pb-5 px-4 flex flex-col justify-center items-center"
+      class="w-screen pt-25 pb-5 px-4 flex flex-col justify-center items-center bg-linear-to-b from-[rgba(190,98,41,0.1)] via-transparent via-50% to-transparent"
     >
-      <SectionTitle name={props.name} />
+      
+      <h1>MY SKILLS</h1>
 
       <div class="max-w-4xl w-full grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 text-[#9d9c91] justify-items-center space-y-10">
         {/* languages */}
         <div class>
           <h1 class="text-[#778069] text-lg font-semibold mb-3">LANGUAGES</h1>
-          <ul class="text-center md:text-left space-y-0.5"> 
+          <ul class="text-center md:text-left space-y-0.5">
             <li>C</li>
             <li>C++</li>
             <li>CSS</li>
             <li>Java</li>
             <li>Javascript</li>
             <li>HTML</li>
-            <li>SQL</li> 
+            <li>SQL</li>
           </ul>
         </div>
 

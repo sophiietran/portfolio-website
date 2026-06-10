@@ -2,12 +2,12 @@ export default function HomeSection() {
   return (
     <section
       id="home"
-      class="relative h-screen w-screen flex justify-center items-center bg-linear-to-t from-[rgba(190,98,41,0.1)] via-transparent via-20% to-transparent"
+      class="relative h-screen w-screen flex justify-center items-center bg-linear-to-t from-[rgba(190,98,41,0.1)] via-20% via-transparent"
     >
-      <div class="text-center m-12 -mt-7">
+      <div class="text-center mx-12 mb-12 -mt-7">
         <p class="text-xl">hello! my name is</p>
 
-        <h1 class="font-bold text-[10rem] tracking-wider ">SOPHIE TRAN</h1>
+        <h1 class="font-bold text-[10rem] tracking-wider">SOPHIE TRAN</h1>
 
         <p class="text-2xl max-w-4xl mx-auto">
           software engineer. front-end developer. located in

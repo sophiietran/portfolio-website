@@ -1,3 +1,4 @@
+// TODO: DELETE THIS
 export default function SectionTitle(props) {
   return (
     <div class="flex items-center w-full max-w-4xl text-lg text-[#b9b3ab] mb-12">
