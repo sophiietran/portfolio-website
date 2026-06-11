@@ -2,23 +2,27 @@ export default function HomeSection() {
   return (
     <section
       id="home"
-      className="relative h-screen w-screen flex justify-center items-center bg-linear-to-t from-[rgba(190,98,41,0.1)] via-20% via-transparent"
+      className="relative h-screen w-screen flex justify-center items-center bg-linear-to-t from-[rgba(190,98,41,0.1)] via-20% via-transparent "
     >
       <div className="text-center mx-12 mb-12 -mt-7">
         <p className="text-xl">hello! my name is</p>
 
-        <h1 className="font-bold text-[10rem] tracking-wider">SOPHIE TRAN</h1>
+        <h1 className="font-bold text-[10rem] tracking-wider animate-fade-in">
+          SOPHIE TRAN
+        </h1>
 
         <p className="text-2xl max-w-4xl mx-auto">
-          software engineer. front-end developer. located in
-          <span className="text-[#f1821a]"> dallas, texas</span>. passionate about
-          creating impactful solutions.
+          software engineer. full stack developer. located in
+          <span className="text-[#f1821a]"> dallas, texas</span>. passionate
+          about creating impactful solutions.
         </p>
 
         {/* email + resume */}
         <div className="group absolute bottom-45 left-0 right-0 flex flex-col items-center gap-4 text-[#797979] ">
           <div className="flex flex-wrap justify-center items-center font-medium text-lg sm:flex-nowrap group-hover:text-[#ffffff]">
-            <p className="mr-2 transition-colors duration-300 ">get in touch: </p>
+            <p className="mr-2 transition-colors duration-300 ">
+              get in touch:{" "}
+            </p>
             <a
               href="mailto:sophietrann01@gmail.com"
               className="transition-colors duration-300 hover:text-[#f1821a]"
