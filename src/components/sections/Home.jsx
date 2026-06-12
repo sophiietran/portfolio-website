@@ -12,7 +12,7 @@ export default function HomeSection() {
         </h1>
 
         <p className="text-2xl max-w-4xl mx-auto">
-          software engineer. full stack developer. located in
+          software engineer. fullstack developer. located in
           <span className="text-[#f1821a]"> dallas, texas</span>. passionate
           about creating impactful solutions.
         </p>
@@ -25,7 +25,7 @@ export default function HomeSection() {
             </p>
             <a
               href="mailto:sophietrann01@gmail.com"
-              className="transition-colors duration-300 hover:text-[#f1821a]"
+              className="transition-colors duration-300 hover:text-[#6efaff]"
             >
               sophietrann01@gmail.com
             </a>
@@ -35,7 +35,7 @@ export default function HomeSection() {
             href="/sophie-tran-resume-swe.pdf"
             download
             className="inline-flex items-center px-4 py-1 border-2 border-[#797979]
-            font-medium text-lg transition-all duration-300 group-hover:text-[#ffffff] group-hover:border-[#ffffff] hover:text-[#f1821a] hover:border-[#f1821a]"
+            font-medium text-lg transition-all duration-300 group-hover:text-[#ffffff] group-hover:border-[#ffffff] hover:text-[#6efaff] hover:border-[#6efaff]"
             aria-label="Download Sophie Tran's Resume"
           >
             <img
