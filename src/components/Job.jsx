@@ -1,6 +1,6 @@
 export default function Job(props) {
   return (
-    <div className="flex items-start pl-8 pb-10 relative">
+    <div className="flex items-start pl-8 relative">
       {/* Circle on the timeline */}
       <div className="absolute -left-1.75 top-2 w-3 h-3 rounded-full bg-[#f1821a] shrink-0" />
 

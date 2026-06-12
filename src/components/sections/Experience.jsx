@@ -1,6 +1,6 @@
 import Job from "../Job";
 
-export default function Experience(props) {
+export default function Experience() {
   return (
     <section
       id="experience"
@@ -10,7 +10,21 @@ export default function Experience(props) {
         EXPERIENCE
       </h1>
 
-      <div className="flex flex-col gap-10 border-l-2 border-[#f1821a] ">
+      <div className="flex flex-col gap-20 border-l-2 border-[#f1821a] ">
+        <Job
+          company="Comerica Bank"
+          title="Software Engineer Intern"
+          date="May - Aug 2025"
+          desc="Delivered Salesforce features across full SDLC environments through Copado CI/CD pipelines, including expanding a complaint management system with automated priority-based due dates."
+          skills="Salesforce, Java, SQL"
+        />
+        <Job
+          company="Comerica Bank"
+          title="Software Engineer Intern"
+          date="May - Aug 2025"
+          desc="Delivered Salesforce features across full SDLC environments through Copado CI/CD pipelines, including expanding a complaint management system with automated priority-based due dates."
+          skills="Salesforce, Java, SQL"
+        />
         <Job
           company="Comerica Bank"
           title="Software Engineer Intern"
