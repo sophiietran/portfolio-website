@@ -7,7 +7,7 @@ export default function ProjectCard(props) {
   return (
     <div
       ref={ref}
-      className={`flex flex-col lg:w-full lg:flex-row lg:gap-5 items-center lg:items-start
+      className={`group flex flex-col lg:w-full lg:flex-row lg:gap-5 items-center lg:items-start
         transition-all duration-700 ease-out
         ${inView ? "opacity-100 translate-x-0" : `opacity-0 ${props.reverse ? "translate-x-24" : "-translate-x-24"}`}
         ${props.reverse ? "lg:flex-row-reverse" : "lg:flex-row"}`}
@@ -17,7 +17,7 @@ export default function ProjectCard(props) {
         <img
           src={props.img}
           alt={`${props.title} screenshot`}
-          className="w-full h-full object-cover lg:grayscale lg:brightness-75 lg:transition-all lg:duration-200 lg:hover:grayscale-0 lg:hover:brightness-100"
+          className="w-full h-full object-cover lg:grayscale lg:brightness-75 lg:transition-all lg:duration-200 lg:group-hover:grayscale-0 lg:group-hover:brightness-100"
         />
       </div>
 
@@ -30,7 +30,7 @@ export default function ProjectCard(props) {
         </h1>
 
         <div
-          className={`bg-[#29354a] text-sm p-2 text-center ${props.reverse ? "lg:-mr-14 z-10" : "lg:-ml-14 z-10"}`}
+          className={`bg-[#29354a] text-sm py-3 lg:px-5 text-center ${props.reverse ? "lg:text-left lg:-mr-14 z-10" : "lg:text-right lg:-ml-14 z-10"}`}
         >
           {props.desc}
         </div>
