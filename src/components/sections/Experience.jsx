@@ -16,7 +16,7 @@ export default function Experience() {
           title="Software Engineer Intern"
           date="May - Aug 2025"
           desc="Delivered Salesforce features across full SDLC environments through Copado CI/CD pipelines, including expanding a complaint management system with automated priority-based due dates."
-          skills="Salesforce, Java, SQL"
+          skills="Salesforce, Java, SQL, CI/CD"
         />
       </div>
     </section>

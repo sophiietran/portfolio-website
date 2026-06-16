@@ -12,7 +12,7 @@ export default function HomeSection() {
         </h1>
 
         <p className="text-2xl max-w-4xl mx-auto">
-          software engineer. fullstack developer. located in
+          software engineer. data scientist. located in
           <span className="text-[#f1821a]"> dallas, texas</span>. passionate
           about creating impactful solutions.
         </p>
