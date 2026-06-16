@@ -1,7 +1,16 @@
+import useInView from "../hooks/useInView";
+
 export default function ProjectCard(props) {
+
+  const { ref, inView } = useInView({ threshold: 0.2 });
+
   return (
     <div
-      className={`flex flex-col lg:w-full lg:flex-row lg:gap-5 items-center lg:items-start ${props.reverse ? "lg:flex-row-reverse" : "lg:flex-row"}`}
+      ref={ref}
+      className={`flex flex-col lg:w-full lg:flex-row lg:gap-5 items-center lg:items-start
+        transition-all duration-700 ease-out
+        ${inView ? "opacity-100 translate-x-0" : `opacity-0 ${props.reverse ? "translate-x-24" : "-translate-x-24"}`}
+        ${props.reverse ? "lg:flex-row-reverse" : "lg:flex-row"}`}
     >
       {/* Image */}
       <div className="relative w-full lg:w-145 lg:h-90 shrink-0">
@@ -14,14 +23,21 @@ export default function ProjectCard(props) {
 
       {/* Content */}
       <div className="flex flex-col text-center">
-        <h1 className={`font-semibold text-2xl ${props.reverse ? "lg:text-left" : "lg:text-right"} pt-4 pb-3 lg:pt-15`}>{props.title}</h1>
+        <h1
+          className={`font-semibold text-2xl ${props.reverse ? "lg:text-left" : "lg:text-right"} pt-4 pb-3 lg:pt-15`}
+        >
+          {props.title}
+        </h1>
 
-        <div className={`bg-[#29354a] text-sm p-2 text-center ${props.reverse ? "lg:-mr-14 z-10" : "lg:-ml-14 z-10"}`}>{props.desc}</div>
+        <div
+          className={`bg-[#29354a] text-sm p-2 text-center ${props.reverse ? "lg:-mr-14 z-10" : "lg:-ml-14 z-10"}`}
+        >
+          {props.desc}
+        </div>
 
         <div className="flex justify-between items-center">
           {/* icon links */}
           <div className="flex flex-row gap-3 p-2">
-
             <a href={props.github}>
               <img
                 src="src/assets/github.svg"
