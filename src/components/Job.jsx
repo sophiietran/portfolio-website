@@ -1,6 +1,14 @@
+import useInView from "../hooks/useInView";
+
 export default function Job(props) {
+  const { ref, inView } = useInView({ threshold: 0.2 });
+
   return (
-    <div className="flex items-start pl-8 relative">
+    <div
+      ref={ref}
+      className={`group flex items-start pl-8 relative transition-all duration-700 ease-out
+        ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+    >
       {/* Circle on the timeline */}
       <div className="absolute -left-1.75 top-2 w-3 h-3 rounded-full bg-[#f1821a] shrink-0" />
 
