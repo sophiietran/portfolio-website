@@ -4,7 +4,7 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="w-screen pt-25 pb-15 flex flex-col md:flex-row bg-linear-to-b from-[rgba(190,98,41,0.1)] via-transparent via-50%"
+      className="w-screen py-30 flex flex-col md:flex-row bg-linear-to-b from-[rgba(190,98,41,0.1)] via-transparent via-50%"
     >
       {/* Left - Title */}
       <div className="w-full md:w-2/5 flex items-center justify-center md:justify-end px-8 md:pr-10 md:px-0 pb-10 md:pb-0">
