@@ -7,7 +7,7 @@ export default function HomeSection() {
       <div className="text-center mx-12 mb-12 -mt-7">
         <p className="text-xl">hello! my name is</p>
 
-        <h1 className="font-bold text-[10rem] tracking-wider animate-fade-in">
+        <h1 className="font-semibold text-[10rem] tracking-wider animate-fade-in">
           SOPHIE TRAN
         </h1>
 
@@ -18,9 +18,9 @@ export default function HomeSection() {
         </p>
 
         {/* email + resume */}
-        <div className="group absolute bottom-45 left-0 right-0 flex flex-col items-center gap-4 text-[#797979] ">
-          <div className="flex flex-wrap justify-center items-center font-medium text-lg sm:flex-nowrap group-hover:text-[#ffffff]">
-            <p className="mr-2 transition-colors duration-300 ">
+        <div className="group/section absolute bottom-45 left-0 right-0 flex flex-col items-center gap-4 text-[#797979]">
+          <div className="flex flex-wrap justify-center items-center font-medium text-lg sm:flex-nowrap group-hover/section:text-[#ffffff]">
+            <p className="mr-2 transition-colors duration-300">
               get in touch:{" "}
             </p>
             <a
@@ -34,15 +34,30 @@ export default function HomeSection() {
           <a
             href="/sophie-tran-resume-swe.pdf"
             download
-            className="inline-flex items-center px-4 py-1 border-2 border-[#797979]
-            font-medium text-lg transition-all duration-300 group-hover:text-[#ffffff] group-hover:border-[#ffffff] hover:text-[#6efaff] hover:border-[#6efaff]"
+            className="group/btn inline-flex items-center px-4 py-1 border-2 border-[#797979] font-medium text-lg transition-all duration-300 group-hover/section:text-[#ffffff] group-hover/section:border-[#ffffff] hover:text-[#6efaff] hover:border-[#6efaff]"
             aria-label="Download Sophie Tran's Resume"
           >
-            <img
-              src="/download-green.png"
-              alt="Download icon"
-              className="mr-2 h-6"
-            />
+            {/* Stacked icons using relative/absolute so they occupy same space */}
+            <div className="relative mr-2 h-6 w-6">
+              {/* Default - gray */}
+              <img
+                src="src/assets/download-before.svg"
+                alt="Download icon"
+                className="absolute inset-0 h-6 transition-opacity duration-300 opacity-100 group-hover/section:opacity-0"
+              />
+              {/* White - section hover */}
+              <img
+                src="src/assets/download-white.svg"
+                alt="Download icon"
+                className="absolute inset-0 h-6 transition-opacity duration-300 opacity-0 group-hover/section:opacity-100 group-hover/btn:opacity-0"
+              />
+              {/* Cyan - button hover */}
+              <img
+                src="src/assets/download-after.svg"
+                alt="Download icon"
+                className="absolute inset-0 h-6 transition-opacity duration-300 opacity-0 group-hover/btn:opacity-100"
+              />
+            </div>
             Resume
           </a>
         </div>
