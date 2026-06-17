@@ -35,14 +35,14 @@ export default function ProjectCard(props) {
           {props.desc}
         </div>
 
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center pt-2">
           {/* icon links */}
-          <div className="flex flex-row gap-3 p-2">
+          <div className="flex flex-row gap-3">
             <a href={props.github}>
               <img
                 src="src/assets/github.svg"
                 alt="github"
-                className="w-7 h-7"
+                className="w-8 h-8"
               />
             </a>
 
