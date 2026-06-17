@@ -1,5 +1,4 @@
 import { useState } from "react";
-import SectionTitle from "../SectionTitle";
 
 export default function Contact(props) {
   const [result, setResult] = useState("");
@@ -29,84 +28,102 @@ export default function Contact(props) {
   return (
     <section
       id="contact"
-      class="w-screen pt-25 pb-5 px-4 flex flex-col justify-start items-center"
+      className="w-full py-20 px-10 flex flex-col md:flex-row gap-10 md:gap-20 justify-center items-start md:items-center"
     >
-      <SectionTitle name={props.name} />
+      {/* title, socials */}
+      <div className="flex flex-col gap-4 w-full md:w-auto">
+        <h1 className="text-6xl md:text-7xl font-semibold text-[#f1821a] tracking-tight">
+          CONTACT ME
+        </h1>
+        <p className="text-gray-400 text-sm max-w-xs">
+          Have a question or want to work together? Drop me a message!
+        </p>
 
-      <h1 class="text-xl font-semibold text-[#778069] mb-6">
-        send me a message!
-      </h1>
+        {/* SOCIAL MEDIA */}
+        <div className="flex items-center gap-4">
+          <h4 className="text-sm text-gray-300 uppercase tracking-widest">
+            Socials:
+          </h4>
+          <div className="flex items-center gap-3">
+            <a
+              href="https://github.com/sophiietran"
+              className="opacity-70 hover:opacity-100 transition-opacity duration-200"
+            >
+              <img src="/github.svg" alt="github icon" className="h-10 w-10" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/sophiietran"
+              className="opacity-70 hover:opacity-100 transition-opacity duration-200"
+            >
+              <img
+                src="/linkedin.svg"
+                alt="linkedin icon"
+                className="h-13 w-13"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
 
+      {/* message form */}
       <form
         onSubmit={handleSubmit}
-        class="flex flex-col items-center px-3 w-full max-w-lg"
+        className="flex flex-col gap-3 w-full md:max-w-sm"
       >
-        <input
-          type="text"
-          name="first name"
-          placeholder="first name"
-          required
-          class="bg-[#fefefe] text-[#515b42] w-full p-2 px-4 rounded-md m-3 border border-[#b9b3ab] focus:outline-none focus:ring-1 focus:ring-[#778069]"
-        />
-
-        <input
-          type="text"
-          name="last name"
-          placeholder="last name"
-          required
-          class="bg-[#fefefe] text-[#515b42] w-full p-2 px-4 rounded-md m-3 border border-[#b9b3ab] focus:outline-none focus:ring-1 focus:ring-[#778069]"
-        />
+        <div className="flex flex-col sm:flex-row gap-3">
+          <input
+            type="text"
+            name="first name"
+            placeholder="first name"
+            required
+            className="w-full sm:w-1/2 rounded-lg border border-[#6efaff] bg-transparent px-4 py-2 text-sm outline-none focus:border-[#f1821a] transition-colors duration-200 placeholder:text-gray-500"
+          />
+          <input
+            type="text"
+            name="last name"
+            placeholder="last name"
+            required
+            className="w-full sm:w-1/2 rounded-lg border border-[#6efaff] bg-transparent px-4 py-2 text-sm outline-none focus:border-[#f1821a] transition-colors duration-200 placeholder:text-gray-500"
+          />
+        </div>
 
         <input
           type="email"
           name="email"
           placeholder="your email"
           required
-          class="bg-[#fefefe] text-[#515b42] w-full p-2 px-4 rounded-md m-3 border border-[#b9b3ab] focus:outline-none focus:ring-1 focus:ring-[#778069]"
+          className="w-full rounded-lg border border-[#6efaff] bg-transparent px-4 py-2 text-sm outline-none focus:border-[#f1821a] transition-colors duration-200 placeholder:text-gray-500"
         />
 
         <textarea
           name="message"
           placeholder="your message"
           required
-          class="bg-[#fefefe] text-[#515b42] w-full p-2 px-4 rounded-md m-3 border h-40 border-[#b9b3ab] focus:outline-none focus:ring-1 focus:ring-[#778069]"
-        ></textarea>
+          rows={5}
+          className="w-full rounded-lg border border-[#6efaff] bg-transparent px-4 py-2 text-sm outline-none focus:border-[#f1821a] transition-colors duration-200 placeholder:text-gray-500 resize-none"
+        />
 
         <button
           type="submit"
-          class="bg-[#778069] text-[#fefefe] p-2 px-6 mt-8 rounded-md hover:bg-[#576245] transition-all duration-200"
+          className="flex items-center justify-center gap-2 rounded-lg border border-[#6efaff] px-6 py-2 text-sm font-medium hover:bg-[#6efaff] hover:text-black transition-all duration-200 cursor-pointer"
         >
-          <div class="flex justify-center items-center gap-3">
-            <h1 class="text-base font-medium">send message </h1>
-            <p class="font-bold text-xl">&rarr;</p>
-          </div>
+          send message <span>&rarr;</span>
         </button>
+
+        {result && (
+          <p
+            className={`text-sm text-center ${
+              result.startsWith("Thank")
+                ? "text-[#6efaff]"
+                : result === "sending..."
+                  ? "text-gray-400"
+                  : "text-red-400"
+            }`}
+          >
+            {result}
+          </p>
+        )}
       </form>
-
-      {/* Success / Error Message */}
-      {result && (
-        <p className="text-[#778069] mt-4 font-medium text-center">{result}</p>
-      )}
-
-      {/* SOCIAL MEDIA */}
-      <div class="mt-36 justify-center items-center mb-0">
-        <h4 class="flex justify-center items-center text-[#778069] text-xl font-medium mb-8">
-          my socials:
-        </h4>
-        <div class="flex gap-8">
-          <a href="https://github.com/sophiietran">
-            <img src="/github-icon.svg" alt="github icon" class="h-12 w-12" />
-          </a>
-
-          <a href="https://www.linkedin.com/in/sophiietran">
-            <img
-              src="/linkedin-icon.svg"
-              alt="linkedin icon"
-              class="h-12 w-12"
-            />
-          </a>
-        </div>
-      </div>
     </section>
   );
 }

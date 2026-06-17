@@ -2,47 +2,65 @@ export default function HomeSection() {
   return (
     <section
       id="home"
-      class="h-screen w-screen flex justify-center items-center"
+      className="relative h-screen w-screen flex justify-center items-center bg-linear-to-t from-[rgba(190,98,41,0.1)] via-20% via-transparent "
     >
-      <div class="text-left m-12">
-        <h3 class="text-[#9D9C91] text-2xl mb-6">hello! my name is </h3>
+      <div className="text-center mx-12 mb-12 -mt-7">
+        <p className="text-xl">hello! my name is</p>
 
-        <h1 class="text-[#778069] font-semibold text-7xl mb-9">
-          Sophie Tran
+        <h1 className="font-semibold text-[10rem] tracking-wider animate-fade-in">
+          SOPHIE TRAN
         </h1>
 
-        <h4 class="text-[#b9b3ab] text-xl max-w-4xl">
-          software engineer. front-end developer. located in
-          <strong class="text-[#778069] font-medium"> dallas, texas</strong>.
-          passionate about creating impactful solutions.
-        </h4>
+        <p className="text-2xl max-w-4xl mx-auto">
+          software engineer. data scientist. located in
+          <span className="text-[#f1821a]"> dallas, texas</span>. passionate
+          about creating impactful solutions.
+        </p>
 
-        {/* email */}
-        <div class="flex flex-wrap sm:flex-nowrap items-center mt-24 text-center sm:text-left">
-          <h3 class="text-[#9D9C91] text-lg font-medium mr-2">
-            Get in touch:{" "}
-          </h3>
+        {/* email + resume */}
+        <div className="group/section absolute bottom-45 left-0 right-0 flex flex-col items-center gap-4 text-[#797979]">
+          <div className="flex flex-wrap justify-center items-center font-medium text-lg sm:flex-nowrap group-hover/section:text-[#ffffff]">
+            <p className="mr-2 transition-colors duration-300">
+              get in touch:{" "}
+            </p>
+            <a
+              href="mailto:sophietrann01@gmail.com"
+              className="transition-colors duration-300 hover:text-[#6efaff]"
+            >
+              sophietrann01@gmail.com
+            </a>
+          </div>
 
           <a
-            href="mailto:sophietrann01@gmail.com"
-            class="text-[#778069] font-semibold text-lg underline"
+            href="/sophie-tran-resume-swe.pdf"
+            download
+            className="group/btn inline-flex items-center px-4 py-1 border-2 border-[#797979] font-medium text-lg transition-all duration-300 group-hover/section:text-[#ffffff] group-hover/section:border-[#ffffff] hover:text-[#6efaff] hover:border-[#6efaff]"
+            aria-label="Download Sophie Tran's Resume"
           >
-            sophietrann01@gmail.com
+            {/* Stacked icons using relative/absolute so they occupy same space */}
+            <div className="relative mr-2 h-6 w-6">
+              {/* Default - gray */}
+              <img
+                src="src/assets/download-before.svg"
+                alt="Download icon"
+                className="absolute inset-0 h-6 transition-opacity duration-300 opacity-100 group-hover/section:opacity-0"
+              />
+              {/* White - section hover */}
+              <img
+                src="src/assets/download-white.svg"
+                alt="Download icon"
+                className="absolute inset-0 h-6 transition-opacity duration-300 opacity-0 group-hover/section:opacity-100 group-hover/btn:opacity-0"
+              />
+              {/* Cyan - button hover */}
+              <img
+                src="src/assets/download-after.svg"
+                alt="Download icon"
+                className="absolute inset-0 h-6 transition-opacity duration-300 opacity-0 group-hover/btn:opacity-100"
+              />
+            </div>
+            Resume
           </a>
         </div>
-
-        {/* download resume */}
-        <a
-          href="/sophie-tran-resume.pdf"
-          download
-          class="inline-flex items-center bg-[#f2f2f4] px-4 py-1 mt-7 border-2 border-[#778069]
-                     text-[#778069] font-medium text-lg
-                     hover:bg-[#d7d4cd] hover:border-[#778069] transition-all duration-200"
-          aria-label="Download Sophie Tran's Resume"
-        >
-          <img src="/download-green.png" alt="Download icon" class="mr-2 h-6" />
-          Resume
-        </a>
       </div>
     </section>
   );

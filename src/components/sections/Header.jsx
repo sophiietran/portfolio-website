@@ -1,74 +1,96 @@
-import React, { useState } from "react";
-export default function Header(){
+import React, { useState, useEffect } from "react";
 
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+export default function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
-    const navLinks = [
-      
-      {name: 'home', href: "#home"}, 
-      {name: 'skills', href: "#skills"}, 
-      {name: 'experience', href: "#experience"}, 
-      {name: 'projects', href: "#projects"}, 
-      {name: 'about', href: "#about"}, 
-        {name: 'contact', href: "#contact"}, 
-    ]
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 64);
+    };
 
-    function toggleNavMenu(){
-        setIsMenuOpen(prev => !prev)
-    }
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
-    return (
-      <header class="fixed top-0 w-full bg-[#778069] text-[#f2f2f4] flex justify-between items-center py-4 px-8 z-50">
-        <a href="#" className="text-2xl font-bold z-50">
-          <img src="/favicon.svg" alt="leaf icon" class="h-8 w-8 m-0" />
+  const navLinks = [
+    { name: "home", href: "#home" },
+    { name: "skills", href: "#skills" },
+    { name: "experience", href: "#experience" },
+    { name: "projects", href: "#projects" },
+    { name: "contact", href: "#contact" },
+  ];
+
+  function toggleNavMenu() {
+    setIsMenuOpen((prev) => !prev);
+  }
+
+  return (
+    <>
+      <header
+        className={`fixed top-0 w-full flex items-center py-4 px-8 z-50 transition-all duration-500 ${
+          isScrolled ? "bg-[#10151d]/70 backdrop-blur-md" : "bg-transparent"
+        } ${isMenuOpen ? "hidden min-[806px]:flex" : "flex"}`}
+      >
+        <a href="#home" className="text-[#f1821a]">
+          sophietran.dev
         </a>
 
-        {/* Desktop */}
-        <nav class="hidden md:flex space-x-10 text-base">
-          {/* show all the links */}
+        {/* Desktop Nav */}
+        <nav className="hidden min-[806px]:flex absolute left-1/2 -translate-x-1/2 gap-15 text-center">
           {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
-              class="hover:text-[#d4d4d8] transition-colors duration-200"
+              className="text-[#61dde2] hover:text-[#bae7e9] transition-colors duration-200"
             >
               {link.name}
             </a>
           ))}
         </nav>
 
-        {/* Mobile/Hamburger menu icon */}
-        <div class="md:hidden flex items-center z-50">
+        {/* Hamburger button */}
+        <div
+          className={`min-[806px]:hidden flex items-center z-50 ml-auto ${
+            isMenuOpen ? "hidden" : "flex"
+          }`}
+        >
           <button onClick={toggleNavMenu} aria-label="Toggle navigation menu">
-            {isMenuOpen === false ? (
-              <img
-                src="/hamburger-menu.png"
-                alt="navigation menu"
-                class="h-7 w-7"
-              />
-            ) : (
-              <img src="back.png" alt="close menu" class="h-7 w-7" />
-            )}
+            <img
+              src="/hamburger-menu.png"
+              alt="navigation menu"
+              className="h-7 w-7"
+            />
           </button>
         </div>
-
-        <div
-          class={`fixed inset-y-0 right-0 bg-[#778069] z-40 w-50 transform transition-transform duration-300 ease-in-out md:hidden ${
-            isMenuOpen ? "translate-x-0" : "translate-x-full"
-          } flex flex-col items-center justify-baseline space-y-8 pt-30`}
-        >
-          {/* add functionality to close out of nav menu by clicking body */}
-          {navLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              onClick={toggleNavMenu}
-              class="text-[#f2f2f4] transition-colors duration-200 text-xl"
-            >
-              {link.name}
-            </a>
-          ))}
-        </div>
       </header>
-    );
+
+      {/* show close button when side menu is displayed */}
+      {isMenuOpen && (
+        <div className="fixed top-4 right-8 z-50 min-[806px]:hidden">
+          <button onClick={toggleNavMenu} aria-label="Close navigation menu">
+            <img src="x-thin.svg" alt="close menu" className="h-8 w-8" />
+          </button>
+        </div>
+      )}
+
+      {/* Mobile drawer */}
+      <div
+        className={`fixed inset-y-0 right-0 bg-[#ffffff] text-[#131923] z-40 w-80 transform transition-transform duration-300 ease-in-out min-[806px]:hidden ${
+          isMenuOpen ? "translate-x-0" : "translate-x-full"
+        } flex flex-col items-left justify-baseline space-y-6 pt-30 pl-6`}
+      >
+        {navLinks.map((link) => (
+          <a
+            key={link.name}
+            href={link.href}
+            onClick={toggleNavMenu}
+            className="transition-colors duration-200 text-l"
+          >
+            //{link.name}
+          </a>
+        ))}
+      </div>
+    </>
+  );
 }
