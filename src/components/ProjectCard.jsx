@@ -17,7 +17,7 @@ export default function ProjectCard(props) {
         <img
           src={props.img}
           alt={`${props.title} screenshot`}
-          className="w-full h-full object-cover lg:grayscale lg:brightness-75 lg:transition-all lg:duration-200 lg:group-hover:grayscale-0 lg:group-hover:brightness-100"
+          className="w-full h-full object-cover lg:grayscale lg:brightness-75 lg:transition-all lg:duration-200 lg:group-hover:grayscale-0 lg:group-hover:brightness-90"
         />
       </div>
 
@@ -30,7 +30,7 @@ export default function ProjectCard(props) {
         </h1>
 
         <div
-          className={`bg-[#29354a] text-sm p-3 lg:px-5 text-center ${props.reverse ? "lg:text-left lg:-mr-14 z-10" : "lg:text-right lg:-ml-14 z-10"}`}
+          className={`bg-[#29354a] text-sm p-3 lg:px-5 text-center ${props.reverse ? "lg:text-left lg:-mr-14 z-10 lg:shadow-[4px_5px_6px_rgba(0,0,0,0.5)] " : "lg:text-right lg:-ml-14 z-10 shadow-[-4px_5px_6px_rgba(0,0,0,0.5)]"}`}
         >
           {props.desc}
         </div>
@@ -59,7 +59,7 @@ export default function ProjectCard(props) {
               {props.skills.split(",").map((skill, index) => (
                 <span
                   key={index}
-                  className="font-medium rounded-md py-1 px-1.5 text-xs text-[#6efaffc7] border"
+                  className="font-medium rounded-md py-1 px-1.5 text-xs text-[#6efaff] border"
                 >
                   {skill.trim()}
                 </span>

@@ -7,7 +7,7 @@ export default function Project(props) {
       className="w-screen py-16 lg:py-30 flex flex-col items-center"
     >
       <div className="flex pb-15 lg:pb-25">
-        <h1 className="text-4xl lg:text-8xl font-medium leading-tight">
+        <h1 className="text-6xl md:text-8xl font-semibold tracking-tight">
           MY PROJECTS
         </h1>
       </div>
