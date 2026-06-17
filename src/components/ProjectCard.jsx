@@ -40,7 +40,7 @@ export default function ProjectCard(props) {
           <div className="flex flex-row gap-3">
             <a href={props.github}>
               <img
-                src="src/assets/github.svg"
+                src="/github.svg"
                 alt="github"
                 className="w-8 h-8"
               />
@@ -48,7 +48,7 @@ export default function ProjectCard(props) {
 
             {props.link && (
               <a href={props.link}>
-                <img src="src/assets/link.svg" alt="link" className="w-8 h-8" />
+                <img src="/link.svg" alt="link" className="w-8 h-8" />
               </a>
             )}
           </div>
